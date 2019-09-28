@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
-import Link from "react-router-dom/Link";
+import { Link } from "react-router-dom";
 
 // * Material UI stuff
 import Card from "@material-ui/core/Card";
@@ -44,7 +44,7 @@ class Scream extends Component {
           title="Profile image"
           className={classes.image}
         />
-        <CardContent class={classes.content}>
+        <CardContent className={classes.content}>
           <Typography
             variant="h5"
             component={Link}
