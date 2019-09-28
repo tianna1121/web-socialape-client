@@ -16,11 +16,13 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={home} />
-          <Route exact path="/login" component={login} />
-          <Route exact path="/signup" component={signup} />
-        </Switch>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={home} />
+            <Route exact path="/login" component={login} />
+            <Route exact path="/signup" component={signup} />
+          </Switch>
+        </div>
       </Router>
     </div>
   );
