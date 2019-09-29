@@ -12,7 +12,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { CircularProgress } from "@material-ui/core";
 
-const styles = {
+const styles = theme => ({
   form: {
     textAlign: "center"
   },
@@ -38,7 +38,7 @@ const styles = {
   progress: {
     position: "absolute"
   }
-};
+});
 
 class login extends Component {
   constructor() {
@@ -66,6 +66,7 @@ class login extends Component {
       .post("/login", userData)
       .then(res => {
         console.log(res.data);
+        localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
         this.setState({
           loading: false
         });
