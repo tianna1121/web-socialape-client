@@ -81,8 +81,8 @@ class Profile extends Component {
       authenticated ? (
         <Paper className={classes.paper}>
           <div className={classes.profile}>
-            <div className="profile-image">
-              <img src={imageUrl} alt="profile" />
+            <div className="image-wrapper">
+              <img src={imageUrl} alt="profile" className="profile-image" />
             </div>
             <hr />
             <div className="profile-details">
